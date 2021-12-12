@@ -895,7 +895,7 @@ position: absolute;
 text-decoration-skip-ink: none;
 font-size: 14px;
 line-height: 1.71;
-color: var(--accent-text-color)
+color: var(--accent-text-color);
 letter-spacing: 0.03em; 
 }
 .checkbox-text {
