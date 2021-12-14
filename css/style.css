@@ -905,7 +905,10 @@ align-items: center;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
+transition: border-color var(--transition-time) var(--cubic-bezier);
 }
+
+
 .checkbox-text span {
   width: 16px;
   height: 15px;
@@ -915,7 +918,22 @@ letter-spacing: 0.03em;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color var(--transition-time) var(--cubic-bezier);
+  transition: background-color var(--transition-time) var(--cubic-bezier), 
+  border-color var(--transition-time) var(--cubic-bezier);
+}
+.checkbox-text span:hover,
+.checkbox-text span:focus {
+cursor: pointer;
+border-color: var(--accent-text-color)
+}
+.checkbox-text:hover span,
+.checkbox-text:focus span{
+  cursor: pointer;
+  border: 3px solid red;
+  border-color: var(--accent-text-color)
+}
+.checkbox-text:hover {
+  cursor: pointer;
 }
 .icon-checked {
   fill: transparent;
@@ -964,6 +982,7 @@ letter-spacing: 0.03em;
 .modal-close:hover,
 .modal-close:focus {
 fill: var(--accent-text-color);
+cursor: pointer;
 }
 .is-hidden {
   visibility: hidden;
